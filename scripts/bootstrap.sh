@@ -17,7 +17,7 @@ if xcode-select -p &>/dev/null; then
     warning "Xcode Command Line Tools are already installed."
 else
     info "Installing Xcode Command Line Tools..."
-    xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
+    sudo xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
     acknoledge "Download the Xcode Command Line Tools from the pop-up window before continuing."
 fi
 
