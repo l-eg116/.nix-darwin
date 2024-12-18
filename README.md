@@ -61,7 +61,7 @@ Open a terminal using spotlight : [cmd + space] then type "terminal" and press e
 Then execute the command below and follow the instructions:
 
 ```bash
-curl -s https://raw.githubusercontent.com/MorganKryze/.nix-darwin/main/scripts/bootstrap.sh | zsh
+curl -s https://raw.githubusercontent.com/l-eg116/.nix-darwin/main/scripts/bootstrap.sh | zsh
 ```
 
 #### Post-installation
