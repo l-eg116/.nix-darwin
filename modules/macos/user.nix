@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 {
-  users.users.blackfox = {
-    home = "/Users/blackfox";
+  users.users.admin = {
+    home = "/Users/admin";
     shell = pkgs.zsh;
   };
 
