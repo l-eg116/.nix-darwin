@@ -65,7 +65,7 @@
             nix-homebrew = {
               enable = true;
               enableRosetta = true;
-              user = "morgan";
+              user = "blackfox";
             };
           }
           home-manager.darwinModules.home-manager
@@ -73,7 +73,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.morgan = import ./modules/home-manager;
+              users.blackfox = import ./modules/home-manager;
               backupFileExtension = "backup";
             };
           }

@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to MorganKryze/.dotfiles! We welcome contributions from everyone. By participating in this project, you agree to abide by the code of conduct outlined in the [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) file.
+Thank you for your interest in contributing to MorganKryze/.nix-darwin! We welcome contributions from everyone. By participating in this project, you agree to abide by the code of conduct outlined in the [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) file.
 
 ## How Can I Contribute?
 
@@ -15,7 +15,7 @@ Any error messages or screenshots if applicable
 
 ### Suggesting Enhancements
 
-If you have ideas for enhancements or new features, we'd love to hear them! You can submit your suggestions by opening a new issue in the [Issues section](https://github.com/MorganKryze/.dotfiles/issues) of our repository. Please provide a clear description of the enhancement and why you think it would be beneficial.
+If you have ideas for enhancements or new features, we'd love to hear them! You can submit your suggestions by opening a new issue in the [Issues section](https://github.com/MorganKryze/.nix-darwin/issues) of our repository. Please provide a clear description of the enhancement and why you think it would be beneficial.
 
 ### Contributing Code
 

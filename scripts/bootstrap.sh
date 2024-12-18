@@ -32,16 +32,16 @@ else
     warning "Rosetta is not required on this machine."
 fi
 
-info "[4/6] Fetching the .dotfiles from GitHub..."
-if [ -d "$HOME/.dotfiles" ]; then
-    info "Pulling the latest version of .dotfiles..."
-    cd "$HOME/.dotfiles" || error "Failed to change directory to $HOME/.dotfiles." || return 1
-    git pull origin main || error "Failed to pull the latest version of .dotfiles." || return 1
+info "[4/6] Fetching the .nix-darwin from GitHub..."
+if [ -d "$HOME/.nix-darwin" ]; then
+    info "Pulling the latest version of .nix-darwin..."
+    cd "$HOME/.nix-darwin" || error "Failed to change directory to $HOME/.nix-darwin." || return 1
+    git pull origin main || error "Failed to pull the latest version of .nix-darwin." || return 1
     git submodule update --init --recursive || error "Failed to update the submodules." || return 1
 else
-    info "Cloning the .dotfiles repository..."
-    git clone --recurse-submodules https://github.com/MorganKryze/.dotfiles.git "$HOME/.dotfiles" || error "Failed to clone the .dotfiles repository." || return 1
-    cd "$HOME/.dotfiles" || error "Failed to change directory to $HOME/.dotfiles." || return 1
+    info "Cloning the .nix-darwin repository..."
+    git clone --recurse-submodules https://github.com/l-eg116/.nix-darwin.git "$HOME/.nix-darwin" || error "Failed to clone the .nix-darwin repository." || return 1
+    cd "$HOME/.nix-darwin" || error "Failed to change directory to $HOME/.nix-darwin." || return 1
 
     info "Creating the .env file..."
     cp .env.example .env || error "Failed to copy the .env.example file." || return 1
@@ -51,13 +51,13 @@ fi
 info "[5/6] Installing Nix..."
 if ! command -v nix &>/dev/null; then
     sh <(curl -L https://nixos.org/nix/install) || error "Failed to install Nix." || return 1
-    acknoledge "Nix has successfully been installed. Start a new terminal window and run again 'curl -s https://raw.githubusercontent.com/MorganKryze/.dotfiles/main/scripts/bootstrap.sh | zsh'"
+    acknoledge "Nix has successfully been installed. Start a new terminal window and run again 'curl -s https://raw.githubusercontent.com/l-eg116/.nix-darwin/main/scripts/bootstrap.sh | zsh'"
 elif ! command -v brew &>/dev/null; then
     info "[6/6] Nix is already installed. Proceeding to the config setup..."
-    nix run nix-darwin --experimental-features "nix-command flakes" -- switch --flake ~/.dotfiles#concord --impure || error "Failed to setup the Concord flake." || return 1
+    nix run nix-darwin --experimental-features "nix-command flakes" -- switch --flake ~/.nix-darwin#concord --impure || error "Failed to setup the Concord flake." || return 1
     success "Bootstrap completed successfully. Your system is now ready to use. Enjoy! :3"
 else
     info "[6/6] Nix and Nix-Darwin are already installed. Rebuilding the environment..."
-    darwin-rebuild switch --flake ~/.dotfiles#concord --impure || error "Failed to rebuild the environment." || return 1
+    darwin-rebuild switch --flake ~/.nix-darwin#concord --impure || error "Failed to rebuild the environment." || return 1
     success "Your system is now up-to-date. Enjoy! :3"
 fi

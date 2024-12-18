@@ -1,9 +1,8 @@
 { pkgs, ... }:
 
 {
-  users.users.morgan = {
-    home = "/Users/morgan";
-    description = "GrosBg";
+  users.users.blackfox = {
+    home = "/Users/blackfox";
     shell = pkgs.zsh;
   };
 

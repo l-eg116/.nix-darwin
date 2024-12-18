@@ -1,6 +1,6 @@
-# Opens a VS Code window in the .dotfiles project
+# Opens a VS Code window in the .nix-darwin project
 function config() {
-	cd ~/.dotfiles
+	cd ~/.nix-darwin
 	opn
 }
 
@@ -52,7 +52,7 @@ function rnd-hash() {
 function create-git-ssh-connections() {
 	description "create-github-ssh-connection" "sets up a new SSH key pair for GitHub."
 
-	source ~/.dotfiles/.env
+	source ~/.nix-darwin/.env
 
 	info "Generating SSH key..."
 	ssh-keygen -t ed25519 -C "$GITHUB_EMAIL" -f ~/.ssh/git -p "" || error "Failed to generate SSH key." || return 1

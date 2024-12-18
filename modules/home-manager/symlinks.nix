@@ -21,7 +21,6 @@
     "Library/Application Support/Code/User/settings.json".source = ./apps/vscode/settings.json;
     "Library/Application Support/Code/User/keybindings.json".source = ./apps/vscode/keybindings.json;
 
-    ".hushlogin".source = /Users/morgan/.dotfiles/docs/assets/.hushlogin;
     ".curlrc".source = ./apps/curl/.curlrc;
     ".config/yazi/theme.toml".source = ./apps/yazi/theme.toml;
     ".config/yazi/yazi.toml".source = ./apps/yazi/yazi.toml;

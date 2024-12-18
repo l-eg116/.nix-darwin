@@ -2,7 +2,7 @@
 
 ## Projects
 
-MorganKryze/.dotfiles makes use of the following open source projects:
+MorganKryze/.nix-darwin makes use of the following open source projects:
 
 ### @mathiasbynens/dotfiles
 
