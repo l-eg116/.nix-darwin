@@ -19,20 +19,20 @@
 
     # Non-cask apps
     brews = [
-      # Core utilities
-      "curl"
-      "p7zip"
-      "poppler"
-      "pkg-config"
-      "graphviz"
-      "ffmpegthumbnailer"
-      "sevenzip"
-      "jq"
-      "fd"
-      "ripgrep"
-      "fzf"
-      "zoxide"
-      "imagemagick"
+      # # Core utilities
+      # "curl"
+      # "p7zip"
+      # "poppler"
+      # "pkg-config"
+      # "graphviz"
+      # "ffmpegthumbnailer"
+      # "sevenzip"
+      # "jq"
+      # "fd"
+      # "ripgrep"
+      # "fzf"
+      # "zoxide"
+      # "imagemagick"
 
       # # Langs
       # "php"
@@ -42,11 +42,11 @@
 
       # Terminal
       "htop"
-      "btop"
-      "lsd"
-      "zsh-autosuggestions"
-      "zsh-syntax-highlighting"
-      "zsh-autopair"
+      # "btop"
+      # "lsd"
+      # "zsh-autosuggestions"
+      # "zsh-syntax-highlighting"
+      # "zsh-autopair"
       "micro"
 
       # # Dockers
@@ -67,12 +67,12 @@
       "fortune"
       "sl"
 
-      # Tools
-      "mailsy"
-      "yazi"
-      "cowsay"
-      "pygments"
-      "lynis"
+      # # Tools
+      # "mailsy"
+      # "yazi"
+      # "cowsay"
+      # "pygments"
+      # "lynis"
     ];
 
     # Cask apps
@@ -107,17 +107,17 @@
       # Browsers
       "arc"
       "zen-browser"
-      "tor-browser"
+      # "tor-browser"
       "firefox"
 
       # Dev apps
       "visual-studio-code"
-      "devtoys"
-      "android-studio"
-      "mactex"
-      "applite"
-      "wezterm"
-      "wireshark"
+      # "devtoys"
+      # "android-studio"
+      # "mactex"
+      # "applite"
+      # "wezterm"
+      # "wireshark"
 
       # # Productivity
       # "notion"
