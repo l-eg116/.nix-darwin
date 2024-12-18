@@ -12,14 +12,14 @@ else
     warning "Hostname is already set to $NEW_HOSTNAME."
 fi
 
-# info "[2/6] Installing Xcode Command Line Tools..."
-# if xcode-select -p &>/dev/null; then
-#     warning "Xcode Command Line Tools are already installed."
-# else
-#     info "Installing Xcode Command Line Tools..."
-#     xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
-#     acknoledge "Download the Xcode Command Line Tools from the pop-up window before continuing."
-# fi
+info "[2/6] Installing Xcode Command Line Tools..."
+if xcode-select -p &>/dev/null; then
+    warning "Xcode Command Line Tools are already installed."
+else
+    info "Installing Xcode Command Line Tools..."
+    xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
+    acknoledge "Download the Xcode Command Line Tools from the pop-up window before continuing."
+fi
 
 info "[3/6] Installing Rosetta..."
 if [ "$(uname -m)" = "arm64" ]; then
