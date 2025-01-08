@@ -105,7 +105,6 @@
       # "surfshark"
 
       # Browsers
-      "arc"
       "zen-browser"
       # "tor-browser"
       "firefox"
@@ -146,8 +145,8 @@
       # Communication
       # "thunderbird@esr"
       "signal"
-      "discord"
-      "telegram"
+      # "discord"
+      # "telegram"
 
       # # Utilities
       # "onyx"
@@ -173,6 +172,8 @@
     ];
 
     # Mac App Store apps
-    masApps = { };
+    masApps = {
+      "Discord" = 1456462087;
+    };
   };
 }
