@@ -26,6 +26,7 @@ else
         xcode-select -p &> /dev/null
         exit_status=$?
         info "Waiting for Xcode to finish installing..."
+        sleep 10
     done
     info "Giving it one more minute to be sure..."
     sleep 60
