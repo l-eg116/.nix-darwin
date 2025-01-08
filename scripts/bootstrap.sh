@@ -18,8 +18,8 @@ if xcode-select -p &>/dev/null; then
 else
     info "Installing Xcode Command Line Tools..."
     sudo xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
-    acknoledge "Download the Xcode Command Line Tools from the pop-up window before continuing."
-    sleep 1
+    info "Download the Xcode Command Line Tools from the pop-up window before continuing."
+    sleep 10
 
     exit_status=1
     while [ $exit_status -ne 0 ]; do
@@ -56,13 +56,13 @@ else
 
     info "Creating the .env file..."
     cp .env.example .env || error "Failed to copy the .env.example file." || return 1
-    acknoledge "Update the .env file with your personal information after the installation."
+    info "Update the .env file with your personal information after the installation."
 fi
 
 info "[5/6] Installing Nix..."
 if ! command -v nix &>/dev/null; then
     sh <(curl -L https://nixos.org/nix/install) || error "Failed to install Nix." || return 1
-    acknoledge "Nix has successfully been installed. Start a new terminal window and run again 'curl -s https://raw.githubusercontent.com/l-eg116/.nix-darwin/main/scripts/bootstrap.sh | zsh'"
+    info "Nix has successfully been installed. Start a new terminal window and run again 'curl -s https://raw.githubusercontent.com/l-eg116/.nix-darwin/main/scripts/bootstrap.sh | zsh'"
     info "Trying to do it for you..."
     sudo osascript -e 'tell app "Terminal" to do script "curl -s https://raw.githubusercontent.com/l-eg116/.nix-darwin/main/scripts/bootstrap.sh | zsh"'
 elif ! command -v brew &>/dev/null; then
