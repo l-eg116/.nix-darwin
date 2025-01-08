@@ -78,8 +78,8 @@
     # Cask apps
     casks = [
       # Fonts
-      "font-symbols-only-nerd-font"
-      "font-hack-nerd-font"
+      # "font-symbols-only-nerd-font"
+      # "font-hack-nerd-font"
 
       # # Docker
       # "docker"
