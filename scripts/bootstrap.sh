@@ -19,6 +19,14 @@ else
     info "Installing Xcode Command Line Tools..."
     sudo xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
     acknoledge "Download the Xcode Command Line Tools from the pop-up window before continuing."
+    osascript <<EOD
+tell application "System Events"
+    tell process "Install Command Line Developer Tools"
+        keystroke return
+        click button "Agree" of window "License Agreement"
+    end tell
+end tell
+EOD
 fi
 
 info "[3/6] Installing Rosetta..."
