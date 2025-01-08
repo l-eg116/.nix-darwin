@@ -173,7 +173,7 @@
 
     # Mac App Store apps
     masApps = {
-      "Discord" = 1456462087;
+      # "Discord" = 1456462087;
     };
   };
 }
