@@ -57,31 +57,33 @@
         };
     in
     {
-      darwinConfigurations."blackbook" = nix-darwin.lib.darwinSystem {
-        modules = [
-          configuration
-          nix-homebrew.darwinModules.nix-homebrew
-          {
-            nix-homebrew = {
-              enable = true;
-              enableRosetta = true;
-              user = "blackfox";
-            };
-          }
-          home-manager.darwinModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.blackfox = import ./modules/home-manager.nix;
-              backupFileExtension = "backup";
-            };
-          }
-          ./modules/home-manager/packages.nix
-          ./modules/macos
-          ./hosts/blackbook
-        ];
+      darwinConfigurations = {
+        default = nix-darwin.lib.darwinSystem {
+          modules = [
+            configuration
+            nix-homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                enable = true;
+                enableRosetta = true;
+                user = "blackfox";
+              };
+            }
+            home-manager.darwinModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.blackfox = import ./modules/home-manager.nix;
+                backupFileExtension = "backup";
+              };
+            }
+            ./modules/home-manager/packages.nix
+            ./modules/macos
+            ./hosts/blackbook
+          ];
+        };
+        darwinPackages = self.darwinConfigurations."default".pkgs;
       };
-      darwinPackages = self.darwinConfigurations."blackbook".pkgs;
     };
 }
