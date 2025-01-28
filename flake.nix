@@ -13,10 +13,6 @@
       url = "github:zhaofengli-wip/nix-homebrew";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -25,7 +21,6 @@
       nix-darwin,
       nixpkgs,
       nix-homebrew,
-      home-manager,
     }:
     let
       configuration =
@@ -67,15 +62,6 @@
                 enable = true;
                 enableRosetta = true;
                 user = "blackfox";
-              };
-            }
-            home-manager.darwinModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.blackfox = import ./modules/home-manager.nix;
-                backupFileExtension = "backup";
               };
             }
             ./modules/home-manager/packages.nix
