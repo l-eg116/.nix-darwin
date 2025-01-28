@@ -14,6 +14,7 @@
       - [Install](#install)
       - [Configure packages](#configure-packages)
     - [Updating and maintaining](#updating-and-maintaining)
+      - [Updating the configuration](#updating-the-configuration)
     - [License](#license)
 
 ### Setting up
@@ -64,7 +65,9 @@ To configure the host as a Salt-Minion, change the related options located in `s
 
 ### Updating and maintaining
 
-<!-- TODO -->
+#### Updating the configuration
+
+Once the bootstrap script has been run on a machine, the configuration won't be updated automatically in case of a change on the repo. To update the configuration on a machine, run the bootstrap script again. It will pull the latest configuration from the repository and apply it to the underlying system. It will also perform some cleaning up so that old packages are not left behind.
 
 ### License
 

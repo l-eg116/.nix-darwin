@@ -74,5 +74,6 @@ elif ! command -v brew &>/dev/null; then
 else
     info "[6/6] Nix and Nix-Darwin are already installed. Rebuilding the environment..."
     darwin-rebuild switch --flake ~/.nix-darwin --impure || error "Failed to rebuild the environment." || return 1
+    sudo nix-collect-garbage -d || warning "Failed to clean old packages."
     success "Your system is now up-to-date. Enjoy! :3"
 fi
