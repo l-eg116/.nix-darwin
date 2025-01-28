@@ -19,6 +19,7 @@ if xcode-select -p &>/dev/null; then
 else
     info "Installing Xcode Command Line Tools..."
     sudo xcode-select --install || error "Failed to install Xcode Command Line Tools." || return 1
+    # TODO : Use `osascript` to automate this step (see https://apple.stackexchange.com/a/98764)
     info "Download the Xcode Command Line Tools from the pop-up window before continuing."
     sleep 10
 
