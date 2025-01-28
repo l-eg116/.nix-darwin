@@ -1,5 +1,5 @@
 {
-  description = "Concord configuration.";
+  description = "Blackbook (Blackfox's MacBook) configuration.";
 
   inputs = {
     nixpkgs = {
@@ -57,7 +57,7 @@
         };
     in
     {
-      darwinConfigurations."concord" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."blackbook" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
           nix-homebrew.darwinModules.nix-homebrew
@@ -65,7 +65,7 @@
             nix-homebrew = {
               enable = true;
               enableRosetta = true;
-              user = "admin";
+              user = "blackfox";
             };
           }
           home-manager.darwinModules.home-manager
@@ -73,20 +73,15 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.admin = import ./modules/home-manager;
+              users.blackfox = import ./modules/home-manager.nix;
               backupFileExtension = "backup";
             };
           }
-          ./modules/home-manager/apps/pkgs.nix
-          ./modules/home-manager/apps/brew.nix
-          # ./modules/home-manager/apps/skhd
-          # ./modules/home-manager/apps/yabai
-          # ./modules/home-manager/apps/sketchybar
-          # ./modules/home-manager/apps/jankyborders
+          ./modules/home-manager/packages.nix
           ./modules/macos
-          ./hosts/concord
+          ./hosts/blackbook
         ];
       };
-      darwinPackages = self.darwinConfigurations."concord".pkgs;
+      darwinPackages = self.darwinConfigurations."blackbook".pkgs;
     };
 }

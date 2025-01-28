@@ -1,4 +1,0 @@
-[submodule "dependencies/bash-toolbox"]
-	path = dependencies/bash-toolbox
-	url = https://github.com/MorganKryze/bash-toolbox.git
-	branch = main

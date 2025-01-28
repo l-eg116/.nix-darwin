@@ -1,9 +1,0 @@
-{ ... }:
-
-{
-  imports = [
-    ./starship
-    ./tmux
-    ./zsh
-  ];
-}

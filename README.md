@@ -1,5 +1,3 @@
-![screenshot](./docs/assets/img/presentation.jpg)
-
 ## Overview
 
 > This project is a collection of my personal dotfiles for my macOS environment.
