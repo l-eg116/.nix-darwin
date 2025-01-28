@@ -2,4 +2,8 @@
 
 {
   networking.hostName = "blackbook";
+
+  imports = [
+    ../modules/packages.nix
+  ];
 }

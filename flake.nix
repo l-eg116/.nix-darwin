@@ -56,6 +56,7 @@
         # Default configuration
         blackbook = nix-darwin.lib.darwinSystem {
           modules = [
+            # Mandatory modules
             configuration
             nix-homebrew.darwinModules.nix-homebrew
             {
@@ -65,8 +66,8 @@
                 user = "blackfox";
               };
             }
-            ./modules/packages.nix
             ./modules/macos
+            # Host specific modules
             ./hosts/blackbook.nix
           ];
         };
