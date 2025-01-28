@@ -64,9 +64,9 @@
                 user = "blackfox";
               };
             }
-            ./modules/home-manager/packages.nix
+            ./modules/packages.nix
             ./modules/macos
-            ./hosts/blackbook
+            ./hosts/blackbook.nix
           ];
         };
         darwinPackages = self.darwinConfigurations."default".pkgs;
