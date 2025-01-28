@@ -7,7 +7,7 @@
     stateVersion = 5;
     startup.chime = false;
     activationScripts = {
-      # Set up the alias for applications to be indexed by Spotlight
+      # Set up the alias for applications to be indexed by Spotlight - DO NOT TOUCH unless you know what you are doing
       applications = {
         text = ''
           echo "setting up /Applications..." >&2
