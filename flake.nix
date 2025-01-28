@@ -34,7 +34,7 @@
           nix = {
             package = pkgs.nix;
             useDaemon = true;
-            configureBuildUsers = true;
+            configureBuildUsers = false; # Setting this to false will prevent nix-darwin from touching users
             gc = {
               automatic = true;
               options = "--delete-older-than 14d";
@@ -53,7 +53,8 @@
     in
     {
       darwinConfigurations = {
-        default = nix-darwin.lib.darwinSystem {
+        # Default configuration
+        blackbook = nix-darwin.lib.darwinSystem {
           modules = [
             configuration
             nix-homebrew.darwinModules.nix-homebrew

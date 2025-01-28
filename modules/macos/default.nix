@@ -5,6 +5,7 @@
     ./system.nix
   ];
 
+  # This user is here to manage homebrew packages
   users.users.blackfox = {
     home = "/Users/blackfox";
     shell = pkgs.zsh;
